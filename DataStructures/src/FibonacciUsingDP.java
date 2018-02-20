@@ -17,17 +17,11 @@ public class FibonacciUsingDP {
 
     private static int fibonacciUsingDP(int number) {
         int temp[] = new int[number + 1];
-
-        if (number == 0) {
-            temp[0] = 0;
-        } else if (number == 1) {
-            temp[1] = 1;
-        } else {
-            for (int i = 2; i <= number; i++) {
-                temp[i] = fibonacciUsingDP(i - 1) + fibonacciUsingDP(i - 2);
-            }
+        temp[0] = 0;
+        temp[1] = 1;
+        for (int i = 2; i <= number; i++) {
+            temp[i] = temp[i - 1] + temp[i - 2];
         }
-
         return temp[number];
     }
 }
