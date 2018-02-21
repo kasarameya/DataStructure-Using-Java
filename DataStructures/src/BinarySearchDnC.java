@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * This program is used to search an element in a set of input elements.
  * We return the index of the element if it is present in the set, else we return -1
@@ -6,6 +8,7 @@
 public class BinarySearchDnC {
     public static void main(String[] args) {
         int[] elements = {4, 2, 5, 88, -1, 7, 9};
+        Arrays.sort(elements);
         bSearch(elements, 55);
     }
 
@@ -21,7 +24,7 @@ public class BinarySearchDnC {
         System.out.println(bSearchHelper(elements, p, r, key));
     }
 
-    /**
+    /**PRECONDITION :- Elements have to be in sorted order
      * This method performs the actual searching of the element in the given set of data
      *
      * @param elements to be searched for
