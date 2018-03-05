@@ -9,7 +9,7 @@ enum Colors {
 }
 
 /**
- * In this program we dynamicall generate a graph by taking inputs from the user at Runtime
+ * In this program we dynamically generate a graph by taking inputs from the user at Runtime
  * and then we traverse the graph using the DFS traversal technique on the basis of colors given
  * to the set of nodes
  * <p>

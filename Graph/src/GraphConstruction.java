@@ -35,6 +35,17 @@ public class GraphConstruction {
     }
 
     /**
+     * Add an edge between the given vertices
+     *
+     * @param v1 the first vertex
+     * @param v2 the second vertex
+     */
+    private void addEdge(int v1, int v2) {
+        adjLinkedListArr[v1].add(v2);
+        adjLinkedListArr[v2].add(v1);
+    }
+
+    /**
      * Method used to print the construction of graph
      */
     private void printGraph() {
@@ -47,16 +58,5 @@ public class GraphConstruction {
 
             System.out.println();
         }
-    }
-
-    /**
-     * Add an edge between the given vertices
-     *
-     * @param v1 the first vertex
-     * @param v2 the second vertex
-     */
-    private void addEdge(int v1, int v2) {
-        adjLinkedListArr[v1].add(v2);
-        adjLinkedListArr[v2].add(v1);
     }
 }
