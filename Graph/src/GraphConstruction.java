@@ -1,3 +1,4 @@
+import java.util.Iterator;
 import java.util.LinkedList;
 
 /**
@@ -51,8 +52,9 @@ public class GraphConstruction {
     private void printGraph() {
         for (int i = 0; i < vertices; i++) {
             System.out.println("Adjacency List for " + i + " node :- ");
-            for (int j = 0; j < adjLinkedListArr[i].size(); j++) {
-                System.out.print(" " + j);
+            Iterator<Integer> li = adjLinkedListArr[i].listIterator();
+            while (li.hasNext()) {
+                System.out.println(li.next().intValue());
             }
 
 
